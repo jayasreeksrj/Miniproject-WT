@@ -1,0 +1,46 @@
+.login-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .body{
+    position: relative; /* Ensure relative positioning for absolute content */
+    background-image: url('https://c8.alamy.com/comp/2BFCHBX/supply-chain-management-industry-abstract-background-concept-2BFCHBX.jpg'); /* Add your background image URL */
+    background-size: cover; /* Cover the entire container */
+    background-position: center;
+  }
+  .login-container h2 {
+    text-align: center;
+  }
+  
+  .login-container div {
+    margin-bottom: 15px;
+  }
+  
+  .login-container label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .login-container input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .login-container button:disabled {
+    background-color: #ccc;
+  }
+  

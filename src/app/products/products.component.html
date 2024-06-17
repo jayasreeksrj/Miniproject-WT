@@ -1,0 +1,54 @@
+<style>
+  .product-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; 
+}
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.custom-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #e26324;
+  color: #fff;
+  margin-right: 50px; /* Adjust margin as needed */
+}
+
+.custom-button:last-child {
+  margin-right: 0; /* Remove right margin from the last button to prevent extra space */
+}
+
+.container {
+  margin-top: 20px; /* Adjust top margin for the container */
+}
+
+</style>
+<div class="products-container">
+    <div *ngFor="let product of products" class="product-card">
+      <img class="product-image" [src]="product.imageUrl" alt="{{ product.name }}">
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.price }}</p>
+      <div class="buttons-section">
+        <div class="buttons-section">
+          <button class="custom-button" (click)="onAddToCart(product)">Add to Cart</button>
+          <button class="custom-button" (click)="onBuyNow(product)">Buy Now</button>
+        </div>
+      </div>
+</div>
+  
+  <!-- Styling the "+" button -->
+  <button mat-fab color="primary" class="custom-plus-button" (click)="openAddProductDialog()">+</button>
+  

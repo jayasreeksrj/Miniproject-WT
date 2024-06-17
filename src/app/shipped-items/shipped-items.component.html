@@ -1,0 +1,17 @@
+
+<div *ngIf="(shippedItems$ | async) as shippedItems">
+  <h2>Shipped Items</h2>
+  <div class="product-list">
+    <div class="product-card" *ngFor="let product of shippedItems">
+      <div class="product-image">
+        <img [src]="product.imageUrl" alt="{{ product.name }}">
+      </div>
+      <div class="product-details">
+        <h3>{{ product.name }}</h3>
+        <p>Category: {{ product.category }}</p>
+        <p>Price: {{ product.price | currency:'USD':'symbol' }}</p>
+        <p>Quantity: {{ product.quantity+1 }}</p>
+      </div>
+    </div>
+  </div>
+</div>
